@@ -28,13 +28,14 @@ export default {
   },
   methods: {
     async test(){
-      const data = axios.get('/abc')
-      console.log("data test", data)
+      try {
+        const data = axios.get('https://jsonplaceholder.typicode.com/todosb/1')
+        console.log("data test", data)
+      } catch (err){
+        console.log(err)
+      }
     }
   },
-  // created() {
-  //   this.test()
-  // }
 }
 </script>
 
